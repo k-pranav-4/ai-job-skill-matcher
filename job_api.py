@@ -1,5 +1,7 @@
 import requests
-from config import RAPIDAPI_KEY
+import streamlit as st
+RAPIDAPI_KEY = st.secrets["RAPIDAPI_KEY"]
+
 
 def get_job_suggestions(skills, location="India", results=5):
     url = "https://jsearch.p.rapidapi.com/search"

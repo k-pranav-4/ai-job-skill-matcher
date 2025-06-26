@@ -1,5 +1,7 @@
 import requests
-from config import RAPIDAPI_KEY  # ✅ secure import
+import streamlit as st
+RAPIDAPI_KEY = st.secrets["RAPIDAPI_KEY"]
+
 
 def get_top_youtube_courses(skill, max_results=2):
     url = "https://youtube-search-and-download.p.rapidapi.com/search"
