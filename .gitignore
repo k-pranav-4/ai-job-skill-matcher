@@ -1,0 +1,17 @@
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Hide config file with API keys
+config.py
+
+# Optional (test scripts you don't want on production)
+test_*.py
+sample_resume.pdf
+nltk_setup.py
+update_skills_from_github.py
+__pycache__/
+*.pyc
+config.py
+sample_resume.pdf

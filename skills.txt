@@ -1,0 +1,307 @@
+ython
+java
+c++
+c
+c#
+javascript
+typescript
+html
+css
+sql
+mysql
+postgresql
+mongodb
+oracle
+firebase
+react
+angular
+vue.js
+django
+flask
+spring boot
+express.js
+node.js
+next.js
+pandas
+numpy
+scikit-learn
+tensorflow
+keras
+pytorch
+matplotlib
+seaborn
+plotly
+power bi
+tableau
+excel
+linux
+bash
+shell scripting
+git
+github
+gitlab
+docker
+kubernetes
+jenkins
+aws
+azure
+google cloud
+devops
+ci/cd
+apache
+nginx
+hadoop
+spark
+airflow
+data engineering
+data science
+data analysis
+machine learning
+deep learning
+reinforcement learning
+nlp
+computer vision
+opencv
+transformers
+huggingface
+time series
+etl
+big data
+data pipelines
+cloud computing
+software engineering
+web development
+backend development
+frontend development
+full stack development
+rest api
+graphql
+oop
+design patterns
+microservices
+agile
+scrum
+jira
+confluence
+trello
+uml
+testing
+unit testing
+integration testing
+test automation
+selenium
+cypress
+playwright
+junit
+pytest
+postman
+api testing
+data visualization
+databases
+data warehousing
+data modeling
+distributed systems
+networking
+cybersecurity
+encryption
+penetration testing
+vulnerability assessment
+robotics
+ros
+ros2
+gazebo
+coppeliasim
+moveit
+slam
+navigation stack
+path planning
+control systems
+state estimation
+embedded systems
+arduino
+raspberry pi
+verilog
+vhdl
+fpga
+electronics
+sensors
+actuators
+control theory
+mechatronics
+autonomous systems
+self-driving cars
+computer graphics
+game development
+unity
+unreal engine
+blockchain
+smart contracts
+solidity
+web3
+nft
+metaverse
+cryptocurrency
+financial modeling
+econometrics
+statistics
+linear algebra
+calculus
+numerical methods
+optimization
+operations research
+supply chain
+logistics
+project management
+stakeholder management
+communication skills
+presentation skills
+critical thinking
+problem solving
+time management
+leadership
+collaboration
+teamwork
+english
+technical writing
+documentation
+research
+publications
+patents
+academic writing
+latex
+ms office
+slack
+zoom
+google meet
+asana
+notion
+figma
+canva
+adobe photoshop
+adobe illustrator
+adobe xd
+ux design
+ui design
+human-computer interaction
+market research
+product management
+product design
+product lifecycle
+a/b testing
+customer support
+crm
+salesforce
+hubspot
+marketing analytics
+seo
+sem
+google analytics
+facebook ads
+social media marketing
+email marketing
+content creation
+copywriting
+video editing
+final cut pro
+adobe premiere pro
+after effects
+sound editing
+animation
+3d modeling
+blender
+maya
+autocad
+solidworks
+catia
+creo
+ansys
+abaqus
+matlab
+simulink
+simscape
+comsol
+labview
+chemcad
+aspentech
+mechanical design
+thermal analysis
+fluid mechanics
+hvac
+manufacturing
+quality assurance
+six sigma
+lean manufacturing
+process improvement
+plant design
+civil engineering
+structural analysis
+construction management
+site engineering
+geotechnical engineering
+surveying
+transportation planning
+urban planning
+architecture
+interior design
+environmental science
+sustainability
+renewable energy
+solar pv
+wind energy
+battery systems
+power systems
+electrical machines
+smart grid
+internet of things
+iot
+edge computing
+mobile development
+android
+ios
+flutter
+react native
+swift
+kotlin
+firebase
+ux research
+bioinformatics
+genomics
+molecular biology
+clinical research
+pharmacovigilance
+medical devices
+healthcare analytics
+biostatistics
+regulatory affairs
+gdpr
+hipaa
+legal research
+contract drafting
+intellectual property
+entrepreneurship
+startup management
+fundraising
+venture capital
+business analysis
+business intelligence
+strategic planning
+finance
+investment banking
+equity research
+risk management
+insurance
+human resources
+recruitment
+talent acquisition
+payroll
+compensation & benefits
+training & development
+corporate training
+customer experience
+client servicing
+event planning
+hospitality management
+travel management
+aviation
+air traffic control
+pilot trainingppp
