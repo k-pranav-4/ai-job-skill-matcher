@@ -1,9 +1,13 @@
+import nltk
+import os
 import re
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-import string
 
-# Load stopwords once
+# 🔁 Tell nltk to look in the local directory
+# nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
+
 STOPWORDS = set(stopwords.words("english"))
 
 def load_skills(filepath="skills.txt"):
@@ -40,4 +44,4 @@ def extract_new_skills(text, known_skills):
            word not in known_skills and
            len(word) > 2
     ]
-    return list(set(filtered))
+    return sorted(set(filtered))

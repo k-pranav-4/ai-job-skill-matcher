@@ -3,6 +3,9 @@ import fitz  # PyMuPDF
 import matplotlib.pyplot as plt
 import re
 import nltk
+import os
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
+
 from nltk.corpus import stopwords
 from utils import load_skills, extract_skills
 from courses import get_top_youtube_courses
