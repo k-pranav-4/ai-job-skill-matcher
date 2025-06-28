@@ -1,14 +1,22 @@
-import nltk
 import os
 import re
-nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
+import spacy
+import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
-# 🔁 Tell nltk to look in the local directory
-# nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
-
+# ✅ Ensure local nltk stopwords work
+nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
 STOPWORDS = set(stopwords.words("english"))
+
+# ✅ Auto-download spaCy model if missing
+from spacy.util import is_package
+import subprocess
+
+if not is_package("en_core_web_sm"):
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+
+nlp = spacy.load("en_core_web_sm")
 
 def load_skills(filepath="skills.txt"):
     """
@@ -20,7 +28,7 @@ def load_skills(filepath="skills.txt"):
 
 def extract_skills(text, known_skills):
     """
-    Extract skills from text by comparing against known skills.
+    Extract known skills from text using regex word boundary.
     """
     text = text.lower()
     found_skills = []
@@ -32,16 +40,21 @@ def extract_skills(text, known_skills):
 
 def extract_new_skills(text, known_skills):
     """
-    Extract potential new skills using keyword heuristics.
-    Avoids stopwords, short/common words, and known skills.
+    Extract potential new skill-like keywords using spaCy NLP.
+    Filters out stopwords, punctuation, digits, and known/common words.
     """
     text = text.lower()
-    tokens = word_tokenize(text)
-    filtered = [
-        word for word in tokens
-        if word.isalpha() and
-           word not in STOPWORDS and
-           word not in known_skills and
-           len(word) > 2
-    ]
-    return sorted(set(filtered))
+    doc = nlp(text)
+
+    new_skills = set()
+
+    for token in doc:
+        if (
+            token.is_alpha and
+            token.text not in STOPWORDS and
+            token.text not in known_skills and
+            len(token.text) > 2
+        ):
+            new_skills.add(token.text)
+
+    return sorted(new_skills)
