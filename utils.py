@@ -6,6 +6,13 @@ import spacy
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from spacy.util import is_package
+from spacy.cli import download as spacy_download
+
+if not is_package("en_core_web_sm"):
+    spacy_download("en_core_web_sm")
+
+nlp = spacy.load("en_core_web_sm")
+
 
 # 🔁 Add local nltk path if needed
 nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
