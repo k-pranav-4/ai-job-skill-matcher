@@ -53,8 +53,11 @@ def add_new_skills(jd_text, known_skills, extracted_skills):
 
 # Upload resume
 resume_file = st.file_uploader("📄 Upload your Resume (PDF only)", type=["pdf"])
-jd_input = st.text_area("💼 Paste Job Description", height=200)
-
+jd_input = st.text_area(
+    "💼 Paste Job Description",
+    placeholder="JD should include skill requirements,e.g. Responsibilities include Python programming, data analysis, ML model development, experience with ROS preferred...",
+    height=200
+)
 if st.button("🔍 Analyze"):
     if resume_file is None or not jd_input.strip():
         st.warning("Please upload a resume and paste the job description.")
