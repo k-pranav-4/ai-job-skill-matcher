@@ -1,33 +1,20 @@
 import nltk
 import os
 import re
-import subprocess
 import spacy
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-from spacy.util import is_package
-from spacy.cli import download as spacy_download
 
-if not is_package("en_core_web_sm"):
-    spacy_download("en_core_web_sm")
-
-nlp = spacy.load("en_core_web_sm")
-
-
-# 🔁 Add local nltk path if needed
+# Tell NLTK to look for stopwords locally
 nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
 
-# ✅ Ensure NLTK stopwords
+# Ensure stopwords are available
 try:
     STOPWORDS = set(stopwords.words("english"))
 except LookupError:
     nltk.download("stopwords")
     STOPWORDS = set(stopwords.words("english"))
 
-# ✅ Ensure spaCy model is installed
-if not is_package("en_core_web_sm"):
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"], check=True)
-
+# Load spaCy model (assumes already installed via requirements.txt)
 nlp = spacy.load("en_core_web_sm")
 
 def load_skills(filepath="skills.txt"):
