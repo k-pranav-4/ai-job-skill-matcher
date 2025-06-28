@@ -1,20 +1,14 @@
-import nltk
 import os
 import re
+import nltk
 import spacy
 from nltk.corpus import stopwords
 
-# Tell NLTK to look for stopwords locally
+# Load local NLTK stopwords
 nltk.data.path.append(os.path.join(os.path.dirname(__file__), "nltk_data"))
+STOPWORDS = set(stopwords.words("english"))
 
-# Ensure stopwords are available
-try:
-    STOPWORDS = set(stopwords.words("english"))
-except LookupError:
-    nltk.download("stopwords")
-    STOPWORDS = set(stopwords.words("english"))
-
-# Load spaCy model (assumes already installed via requirements.txt)
+# ✅ Load spaCy model (must be installed via requirements.txt)
 nlp = spacy.load("en_core_web_sm")
 
 def load_skills(filepath="skills.txt"):
